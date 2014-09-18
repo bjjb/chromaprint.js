@@ -1,3 +1,6 @@
+# A library for generating fingerprints of audio data, which can be used to
+# identify songs.
+
 filter = (type, y, w, h, cmp) ->
   cmp ?= filter.compare.subtractLog
   f = (img, x) -> filter[type](img, x, y, w, h, cmp)
