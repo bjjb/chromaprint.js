@@ -1,0 +1,11 @@
+{
+  "src/*.coffee": {
+    "alternate": "test/%sTest.coffee",
+    "command": "source"
+  },
+  "test/*Test.coffee": {
+    "alternate": "src/%s.coffee",
+    "command": "test"
+  },
+  "*": { "compiler": "node_modules/.bin/cake test" }
+}
