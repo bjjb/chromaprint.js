@@ -121,9 +121,24 @@ calculator = (classifiers...) ->
 
 filterCoefficients = [ 0.25, 0.75, 1, 0.75, 0.25 ]
 
-
+# This returns a function that does the bulk of the work.
 fingerprinter = (config) ->
-  config ?= test1
+  config ?= tests[1]
+  (stream, callback) ->
+    # Extract the audio data
+    processAudio stream, (audio) ->
+      # apply the FFT
+      transform audio, (data) ->
+        # pick out the features (notes)
+        chroma data, (features) ->
+          # filter the features
+          filterChroma features, (features) ->
+            # normalize the results
+            normalizeChroma features, (features) ->
+              # make an image of the features
+              buildImage features, (image) ->
+                # get the fingerprint
+                fingerprint image, callback
 
 GRAYCODE = [ 0, 1, 3, 2 ]
 SAMPLE_RATE = 11025
