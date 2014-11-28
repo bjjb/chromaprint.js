@@ -29,5 +29,8 @@
     "chai": "^1.9.1",
     "coffee-script": "^1.8.0",
     "mocha": "^1.21.4"
+  },
+  "dependencies": {
+    "commander": "^2.5.0"
   }
 }
