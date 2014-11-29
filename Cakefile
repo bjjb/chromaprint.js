@@ -1,9 +1,11 @@
 task "test", "run all tests", ->
-  invoke "build"
   run "mocha"
 
 task "build", "build JS files", ->
   run "coffee -c lib/"
+
+task "docs", "build documentation", ->
+  run "docco lib/*.*.md"
 
 { exec } = require('child_process')
 run = (command) ->

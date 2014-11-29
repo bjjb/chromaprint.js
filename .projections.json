@@ -1,10 +1,10 @@
 {
-  "src/*.coffee": {
+  "lib/*.litcoffee": {
     "alternate": "test/%sTest.coffee",
-    "command": "source"
+    "command": "lib"
   },
   "test/*Test.coffee": {
-    "alternate": "src/%s.coffee",
+    "alternate": "lib/%s.litcoffee",
     "command": "test"
   },
   "*": { "compiler": "node_modules/.bin/cake test" }

@@ -1,0 +1,4 @@
+lib/*.litcoffee
+Cakefile
+doc
+node_modules

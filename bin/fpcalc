@@ -1,3 +1,4 @@
 #!/usr/bin/env node
-require('coffee-script/register')
-require('../fpcalc')
+;(function () {
+  require(require('path').join(__dirname, '..', 'lib', 'fpcalc')).run();
+})();
