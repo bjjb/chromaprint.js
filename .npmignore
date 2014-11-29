@@ -1,4 +1,5 @@
 lib/*.litcoffee
+test/
 Cakefile
 doc
 node_modules

@@ -1,15 +1,23 @@
 task "test", "run all tests", ->
-  run "mocha"
+  npmExec "mocha"
 
 task "build", "build JS files", ->
-  run "coffee -c lib/"
+  npmExec "coffee -c lib/"
 
 task "docs", "build documentation", ->
-  run "docco lib/*.*.md"
+  npmExec "docco lib/*.*.md"
 
-{ exec } = require('child_process')
-run = (command) ->
-  exec "node_modules/.bin/#{command}", (err, stdout, stderr) ->
+if process.platform is 'darwin'
+  task "sample.aiff", "generate /test.sample.aiff, a sample audio file", ->
+    exec "say -v Moira -f #{__dirname}/README.md -o test/sample"
+else # flite needs to be in the PATH.
+  task "sample.wav", "generate /test/sample.wav, a sample audio file", ->
+    exec "flite -voice slt -f #{__dirname}/README.md -o test.sample.wav"
+
+exec = (command) ->
+  require('child_process').exec command, (err, stdout, stderr) ->
     console.log stdout if stdout
-    console.error stderr if stderr
-    throw err if err
+    if err
+      console.error stderr or err
+
+npmExec = (command) -> exec("node_modules/.bin/#{command}")
