@@ -10,15 +10,20 @@ offset into the image), and retuens the quantized and filtered result.
 Arguments are an object containing filter coefficients and quantizer
 coefficients. We make a filter and a quantizer with these.
 
-      f = filter(coefficients.filter...)
-      q = quantizer(coefficients.quantizer...)
+      f = filter(coefficients.f...)
+      q = quantizer(coefficients.q...)
+
+Here's the function that gets returned with `classifier({f:[...],q[...])`.
+
       fn = (image, offset) -> q(f(image, offset))
 
-The filter and the quantizer need to be exposed (so we know how wide a filter
-is, for example)
+The calculator will need to get the widths of the classifier's filters, so we
+expose it as a property of the function.
 
-      fn.quantizer = q
-      fn.filter = f
+      fn.filterWidth = f.w
+
+Now we can return the classifier function.
+
       fn
 
 The API is the factory function.
