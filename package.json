@@ -7,8 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node_modules/.bin/cake test",
-    "start": "node_modules/.bin/cake test-server"
+    "test": "node_modules/.bin/cake test"
   },
   "repository": {
     "type": "git",
@@ -31,12 +30,9 @@
     "coffee-script": "^1.8.0",
     "docco": "^0.6.3",
     "mocha": "^1.21.4",
-    "mocha-phantomjs": "^3.5.1",
     "phantomjs": "^1.9.12"
   },
   "dependencies": {
-    "commander": "^2.5.0",
-    "fft": "^0.2.1",
-    "web-audio-api": "^0.1.5"
+    "commander": "^2.5.0"
   }
 }
