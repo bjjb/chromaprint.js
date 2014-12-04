@@ -34,22 +34,15 @@ or
 The top-level `chromaprint` object has a number of factory functions, which it
 exposes purely for testing. The public API is pretty thin, though.
 
-### `chromaprint.calculateFingerprint(stream, callback)`
-
-Calls `callback` with the compressed and Base64 encoded fingerprint (a
-String).
-
-### `chromaprint.calculateRawFingerprint(stream, callback)`
-
-Calls `callback` with the uncompressed fingerprint (a Buffer).
-
-### `chromaprint.compress(buffer)`
-
-Compresses a buffer, returning a compressed Buffer.
-
-### `chromaprint.base64encode(buffer)`
-
-Encodes the bytes in the buffer into a Base64 String.
+* `chromaprint.calculateFingerprint(stream, options, callback)`
+  Calls `callback` with the compressed and Base64 encoded fingerprint (a
+  String).
+* `chromaprint.calculateRawFingerprint(stream, options, callback)`
+  Calls `callback` with the uncompressed fingerprint (a Buffer).
+* `chromaprint.compress(buffer)`
+  Compresses a buffer, returning a compressed Buffer.
+* `chromaprint.base64encode(buffer)`
+  Encodes the bytes in the buffer into a Base64 String.
 
 ## Testing and development
 
