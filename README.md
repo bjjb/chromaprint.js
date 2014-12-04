@@ -66,16 +66,17 @@ Report issues to the [issue tracker][issues].
 
 There may be something of intrest in the [wiki][]
 
+## License, copyright, thanks, etc
+
+chromaprint.js is licenced under the LGPL (same as [chromaprint][]). See the
+included [LICENSE][] file.
+
+It was written by [bjjb][], as a port of [Lukáš Lalinský's][ll] original C++
+library. You can read more in the README.md of the lib/] directory.
+
 [issues]: https://github.com/bjjb/chromaprint.js/issues
 [wiki]: https://github.com/bjjb/chromaprint.js/wiki
 [ll]: https://oxygene.sk/
 [chromaprint]: https://acoustid.org/chromaprint
 [bjjb]: http://bjjb.github.io
-
-## License, copyright, thanks, etc
-
-chromaprint.js is licenced under the LGPL (same as [chromaprint][]). See the
-included LICENSE file.
-
-It was written by [bjjb][], as a port of [Lukáš Lalinský's][ll] original C++
-library. You can read more in the README.md of the lib/ directory.
+[LICENSE]: https://raw.githubusercontent.com/bjjb/chromaprint.js/master/LICENSE
