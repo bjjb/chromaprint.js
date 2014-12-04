@@ -1,4 +1,4 @@
 {lib,test}/*.js
 docs
 node_modules
-test/sample.aiff
+test/data/
