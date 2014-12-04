@@ -1,4 +1,6 @@
 #!/usr/bin/env node
 ;(function () {
-  require(require('path').join(__dirname, '..', 'lib', 'fpcalc')).run();
+  require('coffee-script/register')
+  var fpcalc = require(require('path').join(__dirname, '..', 'lib', 'fpcalc'))
+  fpcalc()
 })();

@@ -1,10 +1,10 @@
 {
-  "lib/*.litcoffee": {
+  "lib/*.coffee": {
     "alternate": "test/%sTest.coffee",
     "command": "lib"
   },
   "test/*Test.coffee": {
-    "alternate": "lib/%s.litcoffee",
+    "alternate": "lib/%s.coffee",
     "command": "test"
   },
   "*": { "compiler": "node_modules/.bin/cake test" }
