@@ -1,8 +1,6 @@
 { expect } = @chai or require('chai')
 { silenceRemover } = @chromaprint or require('../lib/silenceRemover').chromaprint
 
-console.log silenceRemover
-
 describe "removing silence", ->
   it "will allow non silence through", ->
     fn = silenceRemover(1)

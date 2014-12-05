@@ -13,6 +13,6 @@
     <script src="/index.js"></script>
     <script>mocha.setup('bdd')</script>
     <script src="/test/index.js"></script>
-    <script>mocha.run()</script>
+    <script>(window.mochaPhantomJS || mocha).run()</script>
   </body>
 </html>

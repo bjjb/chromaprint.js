@@ -33,6 +33,7 @@
     "docco": "^0.6.3",
     "http-server": "^0.7.3",
     "mocha": "^1.21.4",
+    "mocha-phantomjs": "^3.5.1",
     "phantomjs": "^1.9.12"
   },
   "dependencies": {
