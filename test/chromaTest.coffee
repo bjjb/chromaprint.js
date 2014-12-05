@@ -1,5 +1,5 @@
-{expect} = require 'chai'
-{ chromaprint: { chroma } } = require '../lib/chroma'
+{ expect } = @chai or require('chai')
+{ chroma } = @chromaprint or require('../lib/chroma').chromaprint
 
 describe "calculating chroma features", ->
   it "properly calculates A", ->

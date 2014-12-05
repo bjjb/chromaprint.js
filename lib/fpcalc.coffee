@@ -1,7 +1,9 @@
-cli = require 'commander'
-fs = require 'fs'
-path = require 'path'
-Promise = require 'q'
+return unless require? and module? # protect the browser
+
+fs = require('fs')
+cli = require('commander')
+path = require('path')
+Promise = require('q')
 
 cli.description "Print the audio fingerprint of one or more files."
 
@@ -55,4 +57,4 @@ run = (args = process.argv) ->
   f = (file, cb) -> fpcalc(file, length, raw, algorithm, cb)
   cli.args.reverse().reduce(((p, n) -> (-> f(n, p))), ->)()
 
-module.exports = run
+module?.exports = run

@@ -1,7 +1,9 @@
-{expect} = require 'chai'
+{ expect } = @chai or require('chai')
+{ silenceRemover } = @chromaprint or require('../lib/silenceRemover').chromaprint
+
+console.log silenceRemover
 
 describe "removing silence", ->
-  { chromaprint: { silenceRemover } } = require('../lib/silenceRemover')
   it "will allow non silence through", ->
     fn = silenceRemover(1)
     samples = [1000, 2000, 3000, 4000, 5000, 6000]

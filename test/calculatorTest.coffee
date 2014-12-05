@@ -1,5 +1,5 @@
-{ expect } = require 'chai'
-{ chromaprint } = require '../lib/calculator'
+{ expect } = @chai ? require('chai')
+chromaprint = @chromaprint ? require('../lib/calculator').chromaprint
 
 describe "images", ->
   { Image: { measure, area, integral } } = chromaprint

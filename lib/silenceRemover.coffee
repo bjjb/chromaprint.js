@@ -1,5 +1,5 @@
 @chromaprint ?= {}
-#
+ 
 # Gets a function for removing silence from a buffer. It can be configured with
 # a silence threshold. The window is also configurable (see the filter function
 # below), but defaults to 55, which, I am told, is 5ms at 11025 Hz.

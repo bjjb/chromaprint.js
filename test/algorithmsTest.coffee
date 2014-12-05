@@ -1,5 +1,5 @@
-{ expect } = require 'chai'
-{ chromaprint: { ALGORITHMS } } = require '../lib/algorithms'
+{ expect } = @chai or require('chai')
+{ ALGORITHMS } = @chromaprint or require('../lib/algorithms').chromaprint
 
 describe "algorithms", ->
   it "is an object", ->
