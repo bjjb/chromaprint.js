@@ -51,6 +51,7 @@ exposes purely for testing. The public API is pretty thin, though.
     cd chromaprint.js
     npm install
     npm test
+    npm test:server # starts a mocha test server
 ```
 
 Report issues to the [issue tracker][issues].
