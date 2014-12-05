@@ -1,5 +1,4 @@
-{lib,test}/*.[lit]coffee
-test/
 Cakefile
-doc
-node_modules
+lib/*.[lit]coffee
+test/
+doc/
