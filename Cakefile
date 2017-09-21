@@ -15,12 +15,12 @@ task "test:headless", "run browser tests with phantomJS", ->
 
 task "build:tests", "compile test/index.js, the browser test suite", ->
   child = npmRun "coffee -cp test/", stdio: [process.stdin, 'pipe', process.stderr]
-  output = require('fs').createWriteStream('test/index.js', 'w', encoding: 'utf8')
+  output = require('fs').createWriteStream('test/index.js', encoding: 'utf8')
   child.stdout.pipe(output)
 
 task "build", "build JS files to index.js", ->
   child = npmRun "coffee -cp lib/", stdio: [process.stdin, 'pipe', process.stderr]
-  output = require('fs').createWriteStream('index.js', 'w', encoding: 'utf8')
+  output = require('fs').createWriteStream('index.js', encoding: 'utf8')
   child.stdout.pipe(output)
 
 task "docs", "build documentation", ->
